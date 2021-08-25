@@ -64,12 +64,36 @@ navbar starts
 
 nav{
     background-color: #fff;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+    height: 97px;
 }
 
 nav .navbar{
+    background-color: #fff;
     height: 97px;
-    /* background-color: cornsilk; */
     display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 99999999999;
+    width: 100%;
+}
+
+nav .navbar.sticky{
+    background: #fff;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.185);
+    height: 53px;
+}
+
+nav .navbar.sticky .nav-logo{
+    display: block;
+    line-height: 53px;
+}
+
+nav .navbar.sticky .nav-list ul li a{
+    line-height: 55px;
 }
 
 nav .navbar .nav-logo{

@@ -30,6 +30,20 @@ $(document).ready(function(){
         }else{
             $('.back-to-top').fadeOut()
         }
+
+         //fixed navbar
+
+         window.addEventListener("scroll", function(){
+             var navbar = this.document.querySelector('.navbar')
+             navbar.classList.toggle("sticky", window.scrollY > 0)
+         })
+
+         if(scrolling > 400){
+             $('.navbar ul li.active').removeClass('active')
+         }else{
+            $('.navbar ul li:first-child').addClass('active')
+         }
+
     })
 
     $('.back-to-top').click(function(){
@@ -38,5 +52,16 @@ $(document).ready(function(){
         },1500)
     })
 
+    //smooth scroll
+
+    var scroll = new SmoothScroll('.navbar a[href*="#"]',{
+    speed : 1000,});
+
+   
+
+    
+
+    
+    
 }
 )
