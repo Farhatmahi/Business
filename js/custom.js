@@ -21,4 +21,22 @@ $(document).ready(function(){
         autoplay: true,
     }, 1500)
 
-})
+    //window scroll
+    $(window).scroll(function(){
+        var scrolling = $(this).scrollTop();
+
+        if(scrolling > 1000){
+            $('.back-to-top').fadeIn()
+        }else{
+            $('.back-to-top').fadeOut()
+        }
+    })
+
+    $('.back-to-top').click(function(){
+        $('body, html').animate({
+            scrollTop : 0, 
+        },1500)
+    })
+
+}
+)
